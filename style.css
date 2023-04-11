@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Tungsten Condensed';
+    src: url('https://aegwebprod.blob.core.windows.net/content/reset/main-site/fonts/TungstenCondensed-Semibold.woff2') format('woff2'),
+    url('https://aegwebprod.blob.core.windows.net/content/reset/main-site/fonts/TungstenCondensed-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+* {
+    box-shadow: 0 0 1px magenta;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    text-align: center;
+    width: 100vw - 10px;
+    padding: 5px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.city{
+    width: 25%;
+    height: calc( ( 100vh - 10px) / 3 - 10px );
+    margin: 5px;
+
+    display: flex;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #1c1c1c;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Tungsten Condensed", sans-serif;
+    font-size: 6vw;
+    line-height: 1em;
+
+    transition: width 0.2s;
+}
+
+.city:hover{
+    width: 48%;
+}
+
+.top .city{
+    background-image: linear-gradient(rgb(5,201,211), rgb(250,205,225));
+}
+
+.mid .city{
+    background-image: linear-gradient(rgb(250,205,225), rgb(248,125,42));
+}
+
+.bot .city{
+    background-image: linear-gradient(rgb(248,125,42), rgb(233,31,24));
+}
+
+@media  (max-width: 767px) {
+    .city {
+        width: calc( 50% - 10px );
+
+        font-size: 12vw;
+    }
+    .city:hover{
+        width: calc( 50% - 10px );
+    }
+    
+
+    .row {
+    flex-wrap: wrap;
+    }
+
+}
